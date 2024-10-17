@@ -33,6 +33,8 @@
     "@stripe/stripe-js": "^1.44.1",
     "@tanstack/react-table": "^8.17.3",
     "@team-plain/typescript-sdk": "^4.5.0",
+    "@tolgee/format-icu": "^5.29.5",
+    "@tolgee/react": "^5.29.5",
     "@types/bcryptjs": "^2.4.6",
     "@upstash/qstash": "^2.3.0",
     "@upstash/ratelimit": "^1.1.3",

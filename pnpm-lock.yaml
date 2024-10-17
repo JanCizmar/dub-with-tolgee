@@ -95,6 +95,12 @@ importers:
       '@team-plain/typescript-sdk':
         specifier: ^4.5.0
         version: 4.5.0
+      '@tolgee/format-icu':
+        specifier: ^5.29.5
+        version: 5.29.5
+      '@tolgee/react':
+        specifier: ^5.29.5
+        version: 5.29.5(react@18.2.0)
       '@types/bcryptjs':
         specifier: ^2.4.6
         version: 2.4.6
@@ -9370,6 +9376,29 @@ packages:
 
   /@tediousjs/connection-string@0.5.0:
     resolution: {integrity: sha512-7qSgZbincDDDFyRweCIEvZULFAw5iz/DeunhvuxpL31nfntX3P4Yd4HkHBRg9H8CdqY1e5WFN1PZIz/REL9MVQ==}
+    dev: false
+
+  /@tolgee/core@5.29.5:
+    resolution: {integrity: sha512-M5BgaKsfnO1IA6CHa+ETvAm5kLMtwLl/y4ETXQvhT9XZ/DaTbt01MsyBuGQdq2PUEdAHqtWm8uJkUZUvFKpc8w==}
+    dev: false
+
+  /@tolgee/format-icu@5.29.5:
+    resolution: {integrity: sha512-/SwQIKfaTYa4+RCayFsqUceqgOrsaWz1b8VO9UjXuwXfuVxGmhdiAxdZSIsB1X3OX2HCHFcG9ylhh1xGoWCQQg==}
+    dev: false
+
+  /@tolgee/react@5.29.5(react@18.2.0):
+    resolution: {integrity: sha512-HQOhSXyE8RPkcH+P5eItfL0o06NPHgGBTGRhj6fyJVguLlhONddbOTIFJtlk/20wEE1YaG1X4BJkkJ5lPuWeiA==}
+    peerDependencies:
+      react: ^16.14.0 || ^17.0.1 || ^18.1.0
+    dependencies:
+      '@tolgee/web': 5.29.5
+      react: 18.2.0
+    dev: false
+
+  /@tolgee/web@5.29.5:
+    resolution: {integrity: sha512-CP6ijaxFR4srTcADgD/P2+8UxyvXUeJ5xueEkTjKyu82Kg4B0rj3cWLyAEC/bihJeWweGFJL5VZzcDmqAdzBaw==}
+    dependencies:
+      '@tolgee/core': 5.29.5
     dev: false
 
   /@tootallnate/once@1.1.2:

@@ -17,7 +17,7 @@ import { Lock, Mail } from "lucide-react";
 import { signIn } from "next-auth/react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
-import {
+import React, {
   Dispatch,
   SetStateAction,
   createContext,
@@ -27,6 +27,7 @@ import {
   useState,
 } from "react";
 import { toast } from "sonner";
+import {T} from "@tolgee/react";
 
 export const authMethods = [
   "google",
@@ -255,7 +256,9 @@ export default function LoginForm() {
     >
       <div className="w-full max-w-md overflow-hidden border-y border-gray-200 sm:rounded-2xl sm:border sm:shadow-sm">
         <div className="border-b border-gray-200 bg-white pb-6 pt-8 text-center">
-          <h3 className="text-lg font-semibold">Sign in to your Dub account</h3>
+          <h3 className="text-lg font-semibold">
+            <T keyName="sign_in_title">Sign in to your Dub account</T>
+          </h3>
         </div>
         <div className="grid gap-3 bg-gray-50 px-4 py-8 sm:px-16">
           <AnimatedSizeContainer height>
