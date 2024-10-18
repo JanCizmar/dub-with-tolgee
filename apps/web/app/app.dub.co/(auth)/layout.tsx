@@ -4,16 +4,19 @@ import Providers from "app/providers";
 import {getStaticData} from "../../../tolgee/shared.ts";
 import {TolgeeNextProvider} from "../../../tolgee/client.tsx";
 import {ReactNode} from "react";
+import {getUserLocale} from "../../../tolgee/locale.ts";
 
 type Props = {
   children: ReactNode;
-  params: { locale: string };
 };
 
 export default async function AuthLayout({
   children,
-  params: { locale },
 }: Props) {
+  const locale = getUserLocale();
+
+  console.log({locale});
+
   const locales = await getStaticData([locale, "en"]);
 
   return (
