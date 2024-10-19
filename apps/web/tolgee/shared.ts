@@ -10,7 +10,6 @@ export const DEFAULT_LOCALE = "en";
 
 export async function getStaticData(languages: string[]) {
   const result: Record<string, any> = {};
-  console.log({ languages });
 
   for (const lang of languages) {
     result[lang] = (await import(`../i18n/${lang}.json`)).default;

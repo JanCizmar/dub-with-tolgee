@@ -1,10 +1,9 @@
-import { getLocale } from 'next-intl/server';
-
-import { TolgeeBase, ALL_LOCALES, getStaticData } from './shared';
-import { createServerInstance } from '@tolgee/react/server';
+import { ALL_LOCALES, getStaticData, TolgeeBase } from "./shared";
+import { createServerInstance } from "@tolgee/react/server";
+import {getUserLocale} from "./locale.ts";
 
 export const { getTolgee, getTranslate, T } = createServerInstance({
-  getLocale: getLocale,
+  getLocale: async () => getUserLocale(),
   createTolgee: async (locale) =>
     TolgeeBase().init({
       // including all locales
