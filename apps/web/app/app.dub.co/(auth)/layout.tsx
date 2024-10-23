@@ -1,16 +1,32 @@
 import Toolbar from "@/ui/layout/toolbar/toolbar";
 import { Background } from "@dub/ui";
 import Providers from "app/providers";
+import {getStaticData} from "../../../tolgee/shared.ts";
+import {TolgeeNextProvider} from "../../../tolgee/client.tsx";
+import { getUserLocale } from "../../../tolgee/locale.ts";
 import { ReactNode } from "react";
 
-export default function AuthLayout({ children }: { children: ReactNode }) {
+type Props = {
+  children: ReactNode;
+};
+
+export default async function AuthLayout({
+  children,
+}: Props) {
+  const locale = getUserLocale();
+  const locales = await getStaticData([locale, "en"]);
+
   return (
-    <Providers>
-      <Toolbar />
-      <Background />
-      <div className="relative z-10 flex min-h-screen w-screen justify-center">
-        {children}
-      </div>
-    </Providers>
+    <html lang={locale}>
+      <body>
+        <TolgeeNextProvider locale={locale} locales={locales}>
+          <Providers>
+            <Toolbar />
+            <Background />
+            {children}
+          </Providers>
+        </TolgeeNextProvider>
+      </body>
+    </html>
   );
 }

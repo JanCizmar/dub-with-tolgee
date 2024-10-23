@@ -2,36 +2,16 @@
   <img alt="Dub.co is the open-source link management infrastructure for modern marketing teams." src="https://github.com/dubinc/dub/assets/28986134/3815d859-afaa-48f9-a9b3-c09964e4d404">
 </a>
 
-<h3 align="center">Dub.co</h3>
-
-<p align="center">
-    The open-source Bitly successor.
-    <br />
-    <a href="https://dub.co"><strong>Learn more »</strong></a>
-    <br />
-    <br />
-    <a href="#introduction"><strong>Introduction</strong></a> ·
-    <a href="#features"><strong>Features</strong></a> ·
-    <a href="#tech-stack"><strong>Tech Stack</strong></a> ·
-    <a href="#self-hosting"><strong>Self-hosting</strong></a> ·
-    <a href="#contributing"><strong>Contributing</strong></a>
-</p>
-
-<p align="center">
-  <a href="https://twitter.com/dubdotco">
-    <img src="https://img.shields.io/twitter/follow/dubdotco?style=flat&label=%40dubdotco&logo=twitter&color=0bf&logoColor=fff" alt="Twitter" />
-  </a>
-  <a href="https://news.ycombinator.com/item?id=32939407"><img src="https://img.shields.io/badge/Hacker%20News-255-%23FF6600" alt="Hacker News"></a>
-  <a href="https://github.com/dubinc/dub/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/dubinc/dub?label=license&logo=github&color=f80&logoColor=fff" alt="License" />
-  </a>
-</p>
-
 <br/>
 
 ## Introduction
 
 Dub.co is the open-source link management infrastructure for modern marketing teams.
+
+## Getting Started
+- Clone the repository
+- Follow the steps [here](https://dub.co/docs/local-development#step-1-local-setup).
+- Access the application at **`http://localhost:8888`**
 
 ## Features
 
@@ -44,6 +24,7 @@ Dub.co is the open-source link management infrastructure for modern marketing te
 ## Tech Stack
 
 - [Next.js](https://nextjs.org/) – framework
+- [CopilotKit](https://github.com/CopilotKit/CopilotKit) –  AI Copilot
 - [TypeScript](https://www.typescriptlang.org/) – language
 - [Tailwind](https://tailwindcss.com/) – CSS
 - [Upstash](https://upstash.com/) – redis
@@ -53,7 +34,7 @@ Dub.co is the open-source link management infrastructure for modern marketing te
 - [BoxyHQ](https://boxyhq.com/enterprise-sso) – SSO/SAML
 - [Turborepo](https://turbo.build/repo) – monorepo
 - [Stripe](https://stripe.com/) – payments
-- [Resend](https://resend.com/) – emails
+- [Postmark](https://postmarkapp.com/) – emails
 - [Vercel](https://vercel.com/) – deployments
 - [Pangea](https://pangea.cloud/services/domain-intel/reputation) - link scanning
 
