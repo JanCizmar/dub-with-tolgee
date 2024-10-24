@@ -1,9 +1,9 @@
-import { ALL_LOCALES, getStaticData, TolgeeBase } from "./shared";
-import { createServerInstance } from "@tolgee/react/server";
 import {getUserLocale} from "./locale.ts";
+import { TolgeeBase, ALL_LOCALES, getStaticData } from './shared';
+import { createServerInstance } from '@tolgee/react/server';
 
 export const { getTolgee, getTranslate, T } = createServerInstance({
-  getLocale: async () => getUserLocale(),
+   getLocale: async () => getUserLocale(),
   createTolgee: async (locale) =>
     TolgeeBase().init({
       // including all locales
