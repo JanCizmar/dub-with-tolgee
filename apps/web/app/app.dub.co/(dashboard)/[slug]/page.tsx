@@ -1,31 +1,34 @@
-"use client"
-import { updateLocale } from "app/api/update-locale/action";
+"use client";
 import { PageContent } from "@/ui/layout/page-content";
+import { useTolgee, useTranslate } from "@tolgee/react";
+import { setUserLocale } from "tolgee/locale";
 import WorkspaceLinksClient from "./page-client";
-import { useTranslate } from '@tolgee/react';
 
 export default function WorkspaceLinks() {
-   const { t } = useTranslate();
-  
+  const { t } = useTranslate();
+  const tolgee = useTolgee(["pendingLanguage"]);
+  const language = tolgee.getPendingLanguage();
+
   return (
     <PageContent title="Links">
-      <div className="w-full flex flex-col px-10">
+      <div className="flex w-full flex-col px-10">
         <p>Select Language</p>
-        <form action={updateLocale}>
-          <select className="rounded-sm" name="locale" id="locale">
-            <option value="en">English</option>
-            <option value="es">Spanish</option>
-            <option value="ar">Arabic</option>
-            <option value="zh">Chinese</option>
-          </select>
-          <button type="submit" className="px-4 py-2 bg-blue-500 text-blue-50">Submit</button>
-        </form>
-        <p>{t('hello')}</p>
-  
+        <select
+          defaultValue={language}
+          className="rounded-sm"
+          name="locale"
+          id="locale"
+          onChange={(e) => setUserLocale(e.currentTarget.value)}
+        >
+          <option value="en">English</option>
+          <option value="es">Spanish</option>
+          <option value="ar">Arabic</option>
+          <option value="zh">Chinese</option>
+        </select>
+        <p>{t("hello")}</p>
       </div>
 
       <WorkspaceLinksClient />
-
     </PageContent>
   );
 }

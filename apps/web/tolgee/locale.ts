@@ -1,9 +1,11 @@
+"use server";
+
 import { cookies, headers } from "next/headers";
 import { ALL_LOCALES, DEFAULT_LOCALE } from "./shared.ts";
 
 const COOKIE_NAME = "NEXT_LOCALE";
 
-export function getUserLocale() {
+export async function getUserLocale() {
   return (
     cookies().get(COOKIE_NAME)?.value || detectLanguage() || DEFAULT_LOCALE
   );

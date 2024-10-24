@@ -1,7 +1,6 @@
 import { FormatIcu } from "@tolgee/format-icu";
 import { DevTools, Tolgee } from "@tolgee/react";
 
-
 const apiKey = process.env.NEXT_PUBLIC_TOLGEE_API_KEY;
 const apiUrl = process.env.NEXT_PUBLIC_TOLGEE_API_URL;
 
@@ -11,7 +10,6 @@ export const DEFAULT_LOCALE = "en";
 
 export async function getStaticData(languages: string[]) {
   const result: Record<string, any> = {};
-  console.log({ languages });
 
   for (const lang of languages) {
     result[lang] = (await import(`../i18n/${lang}.json`)).default;
