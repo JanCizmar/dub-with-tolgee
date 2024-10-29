@@ -1,3 +1,6 @@
 {
-  "hello": "大家好，欢迎使用我的应用程序"
+  "createlink": "创建链接",
+  "hello": "大家好，欢迎使用我的应用程序",
+  "nolink": "未找到链接",
+  "select_language": "选择语言"
 }

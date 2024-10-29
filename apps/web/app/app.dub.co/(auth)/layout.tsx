@@ -1,19 +1,17 @@
 import Toolbar from "@/ui/layout/toolbar/toolbar";
 import { Background } from "@dub/ui";
 import Providers from "app/providers";
-import {getStaticData} from "../../../tolgee/shared.ts";
-import {TolgeeNextProvider} from "../../../tolgee/client.tsx";
-import { getUserLocale } from "../../../tolgee/locale.ts";
 import { ReactNode } from "react";
+import { TolgeeNextProvider } from "../../../tolgee/client.tsx";
+import { getUserLocale } from "../../../tolgee/locale.ts";
+import { getStaticData } from "../../../tolgee/shared.ts";
 
 type Props = {
   children: ReactNode;
 };
 
-export default async function AuthLayout({
-  children,
-}: Props) {
-  const locale = getUserLocale();
+export default async function AuthLayout({ children }: Props) {
+  const locale = await getUserLocale();
   const locales = await getStaticData([locale, "en"]);
 
   return (

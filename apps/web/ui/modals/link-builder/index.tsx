@@ -64,6 +64,9 @@ import { useUTMModal } from "./utm-modal";
 import { UTMTemplatesButton } from "./utm-templates-button";
 import { WebhookSelect } from "./webhook-select";
 
+//👇🏻 Tolgee translation
+import { useTranslate } from "@tolgee/react";
+
 export const LinkModalContext = createContext<{
   workspaceId?: string;
   workspacePlan?: string;
@@ -541,6 +544,8 @@ export function CreateLinkButton({
   setShowLinkBuilder: Dispatch<SetStateAction<boolean>>;
 }) {
   const { slug, nextPlan, exceededLinks } = useWorkspace();
+    const { t } = useTranslate();
+
 
   useKeyboardShortcut("c", () => setShowLinkBuilder(true));
 
@@ -574,7 +579,7 @@ export function CreateLinkButton({
 
   return (
     <Button
-      text="Create link"
+      text={t("createlink")}
       shortcut="C"
       disabledTooltip={
         exceededLinks ? (

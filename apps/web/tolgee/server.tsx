@@ -1,4 +1,4 @@
-import {getUserLocale} from "./locale.ts";
+import { getUserLocale } from "./locale.ts";
 import { TolgeeBase, ALL_LOCALES, getStaticData } from './shared';
 import { createServerInstance } from '@tolgee/react/server';
 

@@ -1,3 +1,6 @@
 {
-  "hello": "Hello everyone, welcome to my app"
+  "createlink": "Create Link",
+  "hello": "Hello everyone, welcome to my app",
+  "nolink": "No Links Found",
+  "select_language": "Select Language"
 }
